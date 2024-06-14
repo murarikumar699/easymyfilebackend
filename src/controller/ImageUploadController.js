@@ -1,23 +1,4 @@
-
-const Image = require("../models/images");
-const base64ToImage = require('base64-to-image');
-const { getImageMime } = require('base64-image-mime')
 const PDFDocument = require('pdfkit');
-const sizeOf = require('image-size');
-const fs = require('fs');
-
-
-const mimeTypes = {
-    png: 'image/png',
-    gif: 'image/gif',
-    jpg: 'image/jpeg',
-    svg: 'image/svg+xml',
-    webp: 'image/webp',
-    jpeg: 'image/jpeg',
-    pjpeg: 'image/jpeg',
-    pjp: 'image/jpeg',
-    jfif: 'image/jpeg'
-  }
 
 
 async function uploadImage(req,res){
@@ -94,11 +75,6 @@ var signatures = {
     "/9j/": "image/jpg"
   };
   
-  const getMimeType = (base64)=>{
-    for(const sign in signatures)if(base64.startsWith(sign))return signatures[sign];
-};
-
-
 
 module.exports = {
     uploadImage,
