@@ -11,7 +11,7 @@ app.use(express.static(path.join(__dirname, 'build')));
 const cors = require('cors');
 
 app.use(cors({
-    origin: ['http://localhost:5000','http://localhost:3000','http://192.168.2.137:3000']
+    origin: ['http://localhost:5000','http://3.110.168.121:4000','http://192.168.2.137:3000']
 }));
 
 // parse various different custom JSON types as JSON
