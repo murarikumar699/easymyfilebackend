@@ -40,13 +40,14 @@ async function createPdfFromImages(imagePaths) {
 
     let i = 0;
     for (let imagePath of imagePaths) {
-        doc.addPage();
+        doc.addPage()
 
     doc.image(imagePath, {
         fit: [500, 700], // Adjust the image size to fit within the specified dimensions
-        align: 'left',
+        align: 'center',
         valign: 'center'
       })   
+
     i++;
   }
   // Finalize the PDF and end the document
