@@ -10,8 +10,9 @@ const path = require('path');
 app.use(express.static(path.join(__dirname, 'build')));
 const cors = require('cors');
 
+
 app.use(cors({
-    origin: ['http://localhost:5000','http://3.110.168.121:4000','http://192.168.2.137:3000']
+    origin: ['http://localhost:4000','http://3.110.168.121:4000','http://192.168.2.137:4000']
 }));
 
 // parse various different custom JSON types as JSON
@@ -20,6 +21,10 @@ app.use(bodyParser.urlencoded({limit: '50mb', extended: true}));
 app.use(bodyParser.json({ type: 'application/json' }))
 
 app.use(chatRoute)
+// app.get('/*', async function (req, res) {
+//     console.log("resres",req.ip);
+//     res.sendFile(path.join(__dirname, 'build', 'index.html'));
+// });
 
 
 server.listen(dotenv.parsed.PORT, function(err){
