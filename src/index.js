@@ -12,7 +12,7 @@ const cors = require('cors');
 
 
 app.use(cors({
-    origin: ['http://localhost:3000','http://65.0.32.114:3000','http://192.168.2.137:3000']
+    origin: ['http://localhost:3000','http://65.0.32.114:3000','http://192.168.1.7:3000']
 }));
 
 // parse various different custom JSON types as JSON
